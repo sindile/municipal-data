@@ -46,7 +46,7 @@
         "item": {
             "attributes": {
                 "code": {
-                    "column": "item_code",
+                    "column": "code",
                     "label": "Code",
                     "type": "string",
                     "description": "Code used by treasury"
@@ -79,7 +79,11 @@
             "key_attribute": "code",
             "label_attribute": "label",
             "description": "",
-            "label": "Item"
+            "label": "Item",
+            "join": {
+                "dimension_table": "incexp_items",
+                "fact_table_column": "item_code"
+            }
         },
         "financial_year_end": {
             "attributes": {
